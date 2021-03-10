@@ -1,0 +1,7 @@
+F:\PJATK\sem6\APBD\cwiczenia_1-s19743\Crawler\bin\Debug\Crawler.exe.config
+F:\PJATK\sem6\APBD\cwiczenia_1-s19743\Crawler\bin\Debug\Crawler.exe
+F:\PJATK\sem6\APBD\cwiczenia_1-s19743\Crawler\bin\Debug\Crawler.pdb
+F:\PJATK\sem6\APBD\cwiczenia_1-s19743\Crawler\obj\Debug\Crawler.csprojAssemblyReference.cache
+F:\PJATK\sem6\APBD\cwiczenia_1-s19743\Crawler\obj\Debug\Crawler.csproj.CoreCompileInputs.cache
+F:\PJATK\sem6\APBD\cwiczenia_1-s19743\Crawler\obj\Debug\Crawler.exe
+F:\PJATK\sem6\APBD\cwiczenia_1-s19743\Crawler\obj\Debug\Crawler.pdb
