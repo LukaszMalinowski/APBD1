@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections;
+using System.Text.RegularExpressions;
+
 
 namespace Crawler
 {
@@ -12,11 +11,34 @@ namespace Crawler
         static void Main(string[] args)
         {
             HttpClient client = new HttpClient();
-            HttpResponseMessage message = client.GetAsync("https://blog.hubspot.com/marketing/professional-email-address").Result;
+            HttpResponseMessage message = client.GetAsync(args[0]).Result;
 
             string htmlString = message.Content.ReadAsStringAsync().Result;
 
-            Console.WriteLine(htmlString);
+            string[] emails = GetEmailsFromHtml(htmlString);
+
+            foreach (string email in emails)
+            {
+                Console.WriteLine(email);
+            }
+
+            Console.ReadKey();
+        }
+
+        static string[] GetEmailsFromHtml(string html)
+        {
+            string pattern = @"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*";
+
+            Regex regex = new Regex(pattern);
+
+            ArrayList emails = new ArrayList();
+
+            foreach (Match match in regex.Matches(html))
+            {
+                emails.Add(match.Value);
+            }
+
+            return (string[]) emails.ToArray( typeof(string));
         }
     }
 }
