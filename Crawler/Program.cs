@@ -47,8 +47,6 @@ namespace Crawler
             {
                 Console.WriteLine(ex.Message);
             }
-            
-            Console.ReadKey();
         }
 
         static bool ArgumentInvalid(string url)
